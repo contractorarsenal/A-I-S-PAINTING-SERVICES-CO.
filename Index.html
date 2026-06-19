@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>A&amp;I's Painting Services Co. | Premium Painting &ndash; Edmonds, Seattle &amp; Snohomish County</title>
+  <meta name="description" content="Professional interior and exterior painting services across Edmonds, Shoreline, Seattle, Snohomish County, and King County. Licensed, insured. Free estimates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-grid">
+      <span class="tb-item">Licensed &bull; Insured &bull; Professional</span>
+      <span class="tb-item tb-center">Interior &bull; Exterior &bull; Cabinets</span>
+      <span class="tb-item tb-right">Free Estimates &bull; <a href="tel:+14253501708">(425) 350-1708</a></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-main">A&amp;I&rsquo;S PAINTING SERVICES CO.</span>
+        <span class="logo-sub">Professional Painting Services</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="tel:+14253501708" class="nav-phone">(425) 350-1708</a>
+        <a href="#estimate" class="btn btn-primary btn-sm nav-cta">Get Estimate</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER (outside header to avoid backdrop-filter stacking context) -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-scrim" id="drawerScrim"></div>
+    <div class="drawer-panel" role="dialog" aria-label="Navigation menu">
+      <div class="drawer-top">
+        <div class="nav-logo">
+          <span class="logo-main">A&amp;I&rsquo;S PAINTING</span>
+          <span class="logo-sub">Services Co.</span>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="drawer-links" aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="drawer-foot">
+        <a href="#estimate" class="btn btn-primary drawer-action-btn">Request Estimate</a>
+        <div class="drawer-meta">
+          <a href="tel:+14253501708">(425) 350-1708</a>
+          <a href="mailto:Ani.paintingservices@gmail.com">Ani.paintingservices@gmail.com</a>
+          <span>Edmonds &bull; Shoreline &bull; Seattle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="https://pub-40ea63a390ee437fa42c80fb1373d6b4.r2.dev/Untitled%20-%20March%2030%2C%202026%20at%2022.24.07%C2%A0(1)-4%20(1).mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left reveal">
+        <p class="eyebrow hero-eyebrow">INTERIOR &bull; EXTERIOR &bull; CABINETS</p>
+        <h1 class="hero-headline">
+          PREMIUM PAINTING.<br />
+          CLEAN FINISHES.<br />
+          <span class="accent">LASTING QUALITY.</span>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-sub">
+          Professional painting services for homeowners across Edmonds, Shoreline, Seattle, Snohomish County, and King County.
+        </p>
+        <div class="hero-ctas">
+          <a href="#estimate" class="btn btn-primary btn-lg">Request Free Estimate</a>
+          <a href="tel:+14253501708" class="btn btn-ghost btn-lg">Call Now</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-pill"><span class="dot"></span>Licensed &amp; Insured</div>
+          <div class="trust-pill"><span class="dot"></span>Free Estimates</div>
+          <div class="trust-pill"><span class="dot"></span>Snohomish &amp; King County</div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal" id="estimate">
+        <p class="hero-card-eyebrow">Free Consultation</p>
+        <h2 class="hero-card-heading">Free Estimates.<br /><span class="accent">Honest Recommendations.</span></h2>
+        <p class="hero-card-sub">Tell us about your project and we&rsquo;ll follow up with clear next steps.</p>
+        <form class="estimate-form" id="estimateForm" novalidate>
+          <div class="field-wrap">
+            <label class="field-label" for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(425) 000-0000" required autocomplete="tel" />
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" name="email" placeholder="you@email.com" autocomplete="email" />
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="projectType">Project Type</label>
+            <select id="projectType" name="projectType">
+              <option value="" disabled selected>Select a service</option>
+              <option value="exterior">Exterior Painting</option>
+              <option value="interior">Interior Painting</option>
+              <option value="cabinet">Cabinet Painting</option>
+              <option value="deck">Deck / Fence Staining</option>
+              <option value="drywall">Drywall Repairs</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Request Free Estimate &rarr;</button>
+        </form>
+        <div class="hero-card-footer">
+          <div class="hcf-item"><span class="hcf-dot"></span>We respond within 24 hours</div>
+          <div class="hcf-item"><span class="hcf-dot"></span>No pressure, no obligation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-grid wrap">
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+        </div>
+        <div class="stat-text">
+          <strong>Professional Crews</strong>
+          <span>Clean Prep &amp; Finish</span>
+        </div>
+      </div>
+      <div class="stat-card reveal" data-d="1">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <div class="stat-text">
+          <strong>Interior &amp; Exterior</strong>
+          <span>Painting Services</span>
+        </div>
+      </div>
+      <div class="stat-card reveal" data-d="2">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div class="stat-text">
+          <strong>Local Service</strong>
+          <span>King &amp; Snohomish County</span>
+        </div>
+      </div>
+      <div class="stat-card reveal" data-d="3">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="stat-text">
+          <strong>Free Estimates</strong>
+          <span>Clear Next Steps</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-visual reveal">
+        <div class="about-photo-wrap">
+          <img
+            src="https://github.com/user-attachments/assets/69bce932-456a-4501-9994-bd237b31f473"
+            alt="A&amp;I Painting Services &ndash; exterior home painting"
+            loading="lazy"
+            width="800" height="600"
+          />
+        </div>
+        <div class="about-accent-box">
+          <strong>Jorge Porcayo</strong>
+          <span>Owner, A&amp;I&rsquo;s Painting Services Co.</span>
+        </div>
+      </div>
+      <div class="about-content reveal" data-d="1">
+        <p class="eyebrow">About</p>
+        <h2>DETAIL-DRIVEN PAINTING FOR HOMES THAT<br /><span class="accent">DESERVE BETTER.</span></h2>
+        <p>A&amp;I&rsquo;S PAINTING SERVICES CO. provides professional interior and exterior painting services across Edmonds, Shoreline, Seattle, Snohomish County, and King County.</p>
+        <p>From prep work to final walkthrough, every project is handled with clean communication, careful protection of your home, and a sharp finish that lasts.</p>
+        <ul class="about-list">
+          <li><span class="check-icon" aria-hidden="true">&#10003;</span>Licensed &amp; Insured</li>
+          <li><span class="check-icon" aria-hidden="true">&#10003;</span>Transparent Estimates</li>
+          <li><span class="check-icon" aria-hidden="true">&#10003;</span>Interior &amp; Exterior Services</li>
+          <li><span class="check-icon" aria-hidden="true">&#10003;</span>Clean, Respectful Crews</li>
+        </ul>
+        <a href="#estimate" class="btn btn-primary">Get a Free Estimate &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services-section" id="services">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <p class="eyebrow">Services</p>
+        <h2>PAINTING SERVICES BUILT<br /><span class="accent">AROUND DETAIL.</span></h2>
+        <p class="section-intro">From prep to final walkthrough, every project is handled with clean lines, careful protection, and a finish designed to last.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="svc-num">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3>Exterior Painting</h3>
+          <p>Refresh and protect your home with professional exterior painting, surface prep, and weather-ready finishes.</p>
+          <a href="#estimate" class="service-link">Request Estimate &rarr;</a>
+        </div>
+        <div class="service-card reveal" data-d="1">
+          <div class="svc-num">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          <h3>Interior Painting</h3>
+          <p>Clean interior painting for walls, ceilings, trim, and full-room transformations.</p>
+          <a href="#estimate" class="service-link">Request Estimate &rarr;</a>
+        </div>
+        <div class="service-card reveal" data-d="2">
+          <div class="svc-num">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3>Deck &amp; Fence Staining</h3>
+          <p>Protect outdoor wood surfaces with proper prep, stain, paint, and clean application.</p>
+          <a href="#estimate" class="service-link">Request Estimate &rarr;</a>
+        </div>
+        <div class="service-card reveal">
+          <div class="svc-num">04</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3>Cabinet Painting</h3>
+          <p>Give kitchens, bathrooms, and built-ins a sharp new look without a full replacement.</p>
+          <a href="#estimate" class="service-link">Request Estimate &rarr;</a>
+        </div>
+        <div class="service-card reveal" data-d="1">
+          <div class="svc-num">05</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <h3>Drywall Repairs</h3>
+          <p>Patch, repair, texture, and prepare damaged drywall before paint for a cleaner final result.</p>
+          <a href="#estimate" class="service-link">Request Estimate &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <p class="eyebrow gallery-eyebrow">Our Work</p>
+        <h2>RECENT PAINTING WORK.</h2>
+        <p class="section-intro">A sample of what clean prep, careful application, and a quality finish looks like on real homes.</p>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-cell g-a reveal">
+          <img src="https://github.com/user-attachments/assets/69bce932-456a-4501-9994-bd237b31f473" alt="Exterior home painting" loading="lazy" width="800" height="1000" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Exterior Home Painting</div>
+            <div class="gal-s">Full Exterior Repaint</div>
+          </div>
+        </div>
+        <div class="gal-cell g-b reveal" data-d="1">
+          <img src="https://github.com/user-attachments/assets/30831b02-8f6a-4307-94a0-d77cc0e7b8fa" alt="Siding work" loading="lazy" width="600" height="400" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Siding Work</div>
+            <div class="gal-s">Exterior Prep &amp; Paint</div>
+          </div>
+        </div>
+        <div class="gal-cell g-c reveal" data-d="2">
+          <img src="https://github.com/user-attachments/assets/6159e6d4-f4e4-4823-a287-fd9651dcdc0d" alt="Interior painting" loading="lazy" width="600" height="400" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Interior Painting</div>
+            <div class="gal-s">Full Room Transformation</div>
+          </div>
+        </div>
+        <div class="gal-cell g-d reveal" data-d="1">
+          <img src="https://github.com/user-attachments/assets/d5523f45-cf1f-44a0-a38d-96fadfdad431" alt="Exterior painting" loading="lazy" width="600" height="400" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Exterior Painting</div>
+            <div class="gal-s">Surface Prep &amp; Finish</div>
+          </div>
+        </div>
+        <div class="gal-cell g-e reveal" data-d="2">
+          <img src="https://github.com/user-attachments/assets/bb28464e-ea43-44f9-8c2e-85d67a08d099" alt="Cabinet painting" loading="lazy" width="600" height="400" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Cabinet Painting</div>
+            <div class="gal-s">Kitchen Refresh</div>
+          </div>
+        </div>
+        <div class="gal-cell g-f reveal" data-d="3">
+          <img src="https://github.com/user-attachments/assets/ebdee28f-9a52-4de7-8451-48a9cfd0e307" alt="Exterior repaint complete" loading="lazy" width="600" height="400" />
+          <div class="gal-scrim"></div>
+          <div class="gal-cap">
+            <div class="gal-t">Exterior Repaint</div>
+            <div class="gal-s">Completed Project</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="section ba-section">
+    <div class="wrap">
+      <div class="ba-header">
+        <div>
+          <p class="eyebrow ba-eyebrow reveal">Transformations</p>
+          <h2 class="reveal" data-d="1">THE DIFFERENCE<br /><span class="accent">DETAIL MAKES.</span></h2>
+        </div>
+        <p class="lead reveal" data-d="2">Drag the slider to see before and after on a real exterior repaint project.</p>
+      </div>
+      <div class="ba reveal" id="ba" style="--split:50%">
+        <div class="ba-layer ba-before">
+          <img
+            src="https://github.com/user-attachments/assets/1ed285e7-ca7e-4ae3-a874-c92aa2e925aa"
+            alt="Before exterior painting"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+        <div class="ba-layer ba-after">
+          <img
+            src="https://github.com/user-attachments/assets/ebdee28f-9a52-4de7-8451-48a9cfd0e307"
+            alt="After exterior painting"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+        <span class="ba-tag ba-l">BEFORE</span>
+        <span class="ba-tag ba-r">AFTER</span>
+        <div class="ba-divider" aria-hidden="true"></div>
+        <div class="ba-handle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M8 7l-5 5 5 5V7zm8 0v10l5-5-5-5z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section why-section">
+    <div class="wrap">
+      <div class="why-header">
+        <div>
+          <p class="eyebrow reveal">Why Us</p>
+          <h2 class="reveal" data-d="1">WHY HOMEOWNERS<br /><span class="accent">CHOOSE A&amp;I.</span></h2>
+        </div>
+        <p class="why-header-right reveal" data-d="2">Anyone can roll paint on a wall. We build the parts that matter &mdash; the prep, the protection, the clean edge, the detail that shows up every time you look at a finished room.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">01</div>
+          <h3>Clean Prep</h3>
+          <p>We protect floors, furniture, landscaping, and surrounding surfaces before painting starts. Your home is treated with care from the first day on site.</p>
+        </div>
+        <div class="why-card reveal" data-d="1">
+          <div class="why-num">02</div>
+          <h3>Sharp Finish</h3>
+          <p>Detailed edges, smooth coverage, and quality finishes that make the final result feel professional. We don&rsquo;t leave until it&rsquo;s right.</p>
+        </div>
+        <div class="why-card reveal" data-d="2">
+          <div class="why-num">03</div>
+          <h3>Local Service</h3>
+          <p>Serving Edmonds, Shoreline, Seattle, Snohomish County, and King County with clear communication and a team that shows up when they say they will.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process-section">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <p class="eyebrow">How It Works</p>
+        <h2>A SIMPLE PROCESS FROM ESTIMATE<br /><span class="accent">TO FINAL WALKTHROUGH.</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Request Estimate</h4>
+            <p>Fill out the form or call us. We&rsquo;ll schedule a time to assess your project at no cost.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal" data-d="1">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Review Scope</h4>
+            <p>A clear written estimate with no surprises. We walk you through every detail before we start.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal" data-d="2">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Prep &amp; Paint</h4>
+            <p>We protect your home, prep all surfaces correctly, and apply paint with clean technique start to finish.</p>
+          </div>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step reveal" data-d="3">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Final Walkthrough</h4>
+            <p>We walk the project with you before we leave. Anything that needs touching up gets handled on the spot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <p class="eyebrow">What Homeowners Say</p>
+        <h2>TRUSTED BY LOCAL<br /><span class="accent">HOMEOWNERS.</span></h2>
+      </div>
+      <div class="testimonials-rotator reveal">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">&ldquo;We had the exterior of our home repainted and couldn&rsquo;t be happier. Jorge&rsquo;s crew was professional, on time, and the prep work they did was better than any contractor we&rsquo;ve hired before. The finished result looks incredible.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SM</div>
+              <div>
+                <strong>Sarah M.</strong>
+                <span>Homeowner in Edmonds</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">&ldquo;We used A&amp;I for full interior painting &mdash; every room, trim, and ceiling. They were clean, careful, and the quality is exactly what we paid for. No drips, clean edges, and they finished within the timeline they quoted.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">RT</div>
+              <div>
+                <strong>The Rivera Family</strong>
+                <span>Family in Shoreline</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">&ldquo;Had them repaint my kitchen cabinets and repair some drywall before the final coat. The transformation is night and day. Professional from estimate to walkthrough &mdash; I&rsquo;ll be calling them again for the exterior this summer.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">DK</div>
+              <div>
+                <strong>David K.</strong>
+                <span>Property Owner in Seattle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="t-prev" id="tPrev" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="testimonial-dots" role="tablist">
+            <button class="t-dot active" data-index="0" aria-label="Testimonial 1" role="tab" aria-selected="true"></button>
+            <button class="t-dot" data-index="1" aria-label="Testimonial 2" role="tab" aria-selected="false"></button>
+            <button class="t-dot" data-index="2" aria-label="Testimonial 3" role="tab" aria-selected="false"></button>
+          </div>
+          <button class="t-next" id="tNext" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="section areas-section">
+    <div class="wrap">
+      <div class="areas-header">
+        <p class="eyebrow reveal">Service Areas</p>
+        <h2 class="reveal" data-d="1">PROUDLY SERVING<br /><span class="accent">LOCAL HOMEOWNERS.</span></h2>
+        <p class="lead reveal" data-d="2">Same crew, same quality, no matter the neighborhood.</p>
+      </div>
+      <div class="areas-grid reveal" data-d="1">
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Edmonds</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Shoreline</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Seattle</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Snohomish County</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>King County</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Lynnwood</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Mountlake Terrace</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Everett</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Bothell</span></div>
+        <div class="area-cell"><span class="area-dot" aria-hidden="true"></span><span>Kirkland</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section cta-section" id="contact">
+    <div class="wrap">
+      <div class="cta-final-inner">
+        <div class="cta-left reveal">
+          <p class="eyebrow eyebrow-light">Free On-Site Estimates</p>
+          <h2>READY TO REFRESH<br /><span class="accent">YOUR HOME?</span></h2>
+          <p>Get a clear estimate, honest recommendations, and a painting team that respects your home.</p>
+        </div>
+        <div class="cta-right reveal" data-d="1">
+          <a href="#estimate" class="btn btn-primary btn-lg">Request Free Estimate &rarr;</a>
+          <a href="tel:+14253501708" class="btn btn-ghost btn-lg">Call (425) 350-1708</a>
+          <div class="cta-trust">
+            <div class="cta-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Licensed &amp; Insured &mdash; documentation provided upfront
+            </div>
+            <div class="cta-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Most estimates delivered within 24 hours of contact
+            </div>
+            <div class="cta-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Serving Snohomish County &amp; King County
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-main">A&amp;I&rsquo;S PAINTING SERVICES CO.</span>
+          <span class="logo-sub">Professional Painting Services</span>
+        </div>
+        <p class="footer-blurb">Licensed, insured painting contractors serving the greater Seattle area. Interior, exterior, cabinets, and drywall done right.</p>
+        <p class="footer-areas">Edmonds &bull; Shoreline &bull; Seattle &bull; Snohomish County &bull; King County</p>
+        <p class="footer-badge">Licensed &bull; Insured &bull; Professional</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#services">Exterior Painting</a>
+        <a href="#services">Interior Painting</a>
+        <a href="#services">Deck &amp; Fence Staining</a>
+        <a href="#services">Cabinet Painting</a>
+        <a href="#services">Drywall Repairs</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <span class="footer-li"><strong>Jorge Porcayo</strong></span>
+        <a href="tel:+14253501708" class="footer-li">(425) 350-1708</a>
+        <a href="mailto:Ani.paintingservices@gmail.com" class="footer-li">Ani.paintingservices@gmail.com</a>
+        <a href="https://anipaintingco.com" target="_blank" rel="noopener noreferrer" class="footer-li">Anipaintingco.com</a>
+        <a href="#estimate" class="btn btn-primary btn-sm footer-estimate-btn">Request Estimate</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap footer-bottom-inner">
+        <span>&copy; <span id="yr"></span> A&amp;I&rsquo;s Painting Services Co. All rights reserved.</span>
+        <div class="footer-badges">
+          <span class="fbadge">Licensed</span>
+          <span class="fbadge">Insured</span>
+          <span class="fbadge">Professional</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    <span>Thank you! We&rsquo;ll be in touch within 24 hours.</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
